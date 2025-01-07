@@ -1,4 +1,4 @@
-a{
+a {
     text-decoration: none;
 }
 
@@ -6,11 +6,13 @@ ul {
     list-style-type: none;
 }
 
+/* Header */
+
 .header-top i {
     color: #EEEA39;
 }
 
-.bg-green{
+.bg-green {
     background-color: #55C627;
 }
 
@@ -40,7 +42,8 @@ ul {
 }
 
 .header-links a {
-    position: relative; /* a elementine relative position verildi */
+    position: relative;
+    /* a elementine relative position verildi */
 }
 
 .header-links a:hover::before {
@@ -67,4 +70,252 @@ ul {
     font-size: 23px;
     margin-left: 10px;
     margin-top: 1px;
+}
+
+.search {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 50px;
+    transition: height 0.3s ease, transform 0.3s ease;
+    transform: translateY(-15px);
+}
+
+/* Search */
+
+.search-bar {
+    display: none;
+    /* Başlangıçta gizli */
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+    position: relative;
+    z-index: 10;
+}
+
+.search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    /* Başlangıçta yüksekliği sıfır yap */
+    overflow: hidden;
+    /* İçeriğin taşmasını engelle */
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #216477 !important;
+    transition: transform 0.3s ease, max-height 0.5s ease, opacity 0.3s ease;
+    /* max-height geçiş süresini de ekle */
+    z-index: 10;
+}
+
+.search-bar.active {
+    transform: translateY(0);
+    max-height: 100px;
+    /* Aktif olduğunda yüksekliği 100px yap */
+}
+
+.search input {
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 10px;
+    width: 600px;
+    box-sizing: border-box;
+    display: none;
+    /* Başlangıçta gizli */
+}
+
+.search.active {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+    /* Açılırken aşağı inme animasyonu */
+}
+
+.search.active input {
+    display: block;
+    /* Aktif olunca göster */
+}
+
+.overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    opacity: 0;
+    /* Başlangıçta görünmez */
+    transition: opacity 0.5s ease;
+    /* Opacity geçiş süresi */
+    display: none;
+    /* Başlangıçta gizli */
+}
+
+.overlay2.active {
+    opacity: 1;
+    /* Aktif olduğunda görünür hale gelir */
+    display: block;
+    /* Aktif olduğunda görünür */
+}
+
+.btn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    left: -11px;
+    top: 2px;
+    transition: transform 0.3s ease;
+    z-index: 20;
+}
+
+.btn:hover {
+    background-color: white;
+    border-color: transparent;
+}
+
+.btn:focus,
+input:focus {
+    outline: none;
+}
+
+.slick-next {
+    right: 0px !important;
+}
+
+/* Menu */
+
+.menu {
+    display: none;
+}
+
+.menu i {
+    font-size: 23px;
+}
+
+/* Başlangıçta gizli olan menü */
+.hidden-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -30%;
+    background-color: #fff;
+    width: 30%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 321321;
+    transition: right 0.3s ease-in-out;
+}
+
+.hidden-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden-menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hidden-menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Overlay (Gölgeleme) */
+.overlay {
+    display: none;
+    /* Başlangıçta gizli */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Tam ekran */
+    height: 100%;
+    /* Tam ekran */
+    background: rgba(0, 0, 0, 0.5);
+    /* Yarı saydam siyah */
+    z-index: 1000;
+    /* Overlay menünün altında olacak */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Menü butonu ekranın sol üst kısmında */
+.menu i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media */
+
+@media (max-width: 992px) {
+    .menu {
+        display: block;
+    }
+
+    .header-links {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 560px) {
+    .hidden-menu {
+        width: 50% !important;
+    }
+
+    .header-top-gap {
+        flex-direction: column;
+        margin-bottom: .5rem;
+    }
+}
+
+/* Banner */
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    background: #4391f18a;
+    color: white;
+    height: 30%;
+    width: 30%;
+    padding-left: 60px;
+    padding-top: 50px;
+} 
+
+.banner-content h3 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px !important;
+}
+
+.banner img {
+    width: 100%;
+    height: 81vh;
+}
+
+.banner-content a {
+    background-color: tra;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+    margin-top: 21rem;
 }

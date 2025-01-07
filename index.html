@@ -15,27 +15,38 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
+
+    <div class="overlay2"></div>
+
+    <div class="search-bar" style="position: relative; z-index: 23424">
+        <div class="search">
+            <input type="text" class="input" placeholder="Arayınız..." />
+        </div>
+    </div>
     <header>
         <div class="bg-green">
             <div class="container">
-                <div class="justify-content-between d-flex align-items-center py-3">
+                <div class="justify-content-between d-flex align-items-center py-3 header">
                     <div class="header-top">
-                        <div class="header-top-gap d-flex gap-2">
-                            <div>
-                                <a href="tel:05421458638" class="header-top-yellow" title="Arayınız"><i
-                                        class="fa-solid fa-phone"></i></a>
+                        <div class="header-top-gap d-flex">
+                            <div class="d-flex">
+                                <div>
+                                    <a href="#" class="header-top-yellow" title="Arayınız"><i
+                                            class="fa-solid fa-phone"></i></a>
+                                </div>
+                                <div class="header-top-right" style="margin: 1px 5px;">
+                                    <a href="#" class="text-white" title="0542 145 86 38">0542 145 86 38</a>
+                                </div>
                             </div>
-                            <div class="header-top-right">
-                                <a href="tel:05421458638" class="text-white" title="0542 145 86 38">0542 145 86 38</a>
-                            </div>
-                            <div>
-                                <a href="mailto:cleaningworkservices@gmail.com"
-                                    title="cleaningworkservices@gmail.com"><i
-                                        class="header-top-yellow fa-regular fa-envelope"></i></a>
-                            </div>
-                            <div class="show-on-pc">
-                                <a href="mailto:cleaningworkservices@gmail.com" class="text-white"
-                                    title="cleaningworkservices@gmail.com">cleaningworkservices@gmail.com</a>
+                            <div class="d-flex">
+                                <div>
+                                    <a href="#" title="#"><i class="header-top-yellow fa-regular fa-envelope"
+                                            style="margin: 1px 5px;"></i></a>
+                                </div>
+                                <div class="show-on-pc">
+                                    <a href="#" class="text-white" title="#">cleaningworkservices@gmail.com</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,11 +75,39 @@
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">İletişim</a></li>
                     </ul>
-                    <i class="fa-sharp fa-thin fa-magnifying-glass"></i>
+                    <div class="search">
+                        <button class="btn">
+                            <i class="fa-thin fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="menu">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+        <!-- Hidden menu -->
+        <div class="hidden-menu">
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">Hizmetlerimiz</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </div>
     </header>
+    <section class="banner">
+        <div class="position-relative">
+            <img src="img/person-cleaning-room-cleaning-staff-is-using-cloth-spraying-disinfectant-wipe-glass-company-office-room-cleaning-staff-maintaining-cleanliness-organization.png" alt="#">
+            <div class="banner-content">
+                <h3>Detaylı Temizlik
+                    Hizmeti</h3>
+                <a href="#">İletişime Geç</a>
+            </div>
+        </div>
+    </section>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
