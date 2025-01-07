@@ -311,11 +311,18 @@ input:focus {
 }
 
 .banner-content a {
-    background-color: tra;
-    color: black;
+    background-color: transparent;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: 150ms ease-in-out;
+    transition: 150ms ease;
     margin-top: 21rem;
+    border: 1px solid white;
 }
+
+.banner-content a:hover {
+    background-color: white;
+    color: #55C627;
+}
+

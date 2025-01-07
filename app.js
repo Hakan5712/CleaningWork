@@ -55,3 +55,17 @@ $(document).ready(function() {
         }, 300); // Animasyon bitene kadar gizleme
     });
 });
+
+$(document).ready(function(){
+    $('.banner-slider').slick({
+        dots: false,               // Alt tarafta noktalar
+        arrows: false,             // Oklar
+        infinite: true,           // Sonsuz döngü
+        speed: 500,               // Geçiş hızı (ms)
+        slidesToShow: 1,          // Bir slayt gösterilsin
+        slidesToScroll: 1,        // Her seferde bir slayt kaydırılsın
+        autoplay: true,           // Otomatik oynatma
+        autoplaySpeed: 3000,      // Otomatik oynatma süresi (ms)
+        adaptiveHeight: true,      // Yüksekliği içeriğe göre ayarla
+    });
+});
